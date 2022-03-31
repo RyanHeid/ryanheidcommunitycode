@@ -14,3 +14,4 @@ Here is the HTML for the toggle switch: <br>
 ``class="label">`` <br>
 ``<span class="ball"></span>`` <br>
 ``</label>`` <br>
+``</div>`` <br>
