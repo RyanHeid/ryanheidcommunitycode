@@ -25,4 +25,17 @@ Here is the JavaScript for the toggle switch: <br>
 ``doucument.body.classList.toggle('dark');`` <br>
 ``});`` <br>
 <br>
-The code that I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
+The code I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
+<br>
+<div className="container--toggle">
+    {
+        togClass === "light" ? 
+            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />
+        :
+            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} />
+     }
+     <label htmlFor="toggle" className="toggle--label">
+          <span className="toggle--label-background"></span>
+     </label>
+</div>
+
