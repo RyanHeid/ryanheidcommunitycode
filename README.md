@@ -31,11 +31,12 @@ The code I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to
 ``    {`` <br>
 ``        togClass === "light" ?``<br> 
 ``            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />`` <br>
-        :
-            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} />
-     }
-     <label htmlFor="toggle" className="toggle--label">
-          <span className="toggle--label-background"></span>
-     </label>
-</div>
+``        :`` <br>
+``            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} />`` <br>
+``     }`` <br>
+``     <label htmlFor="toggle" className="toggle--label">`` <br>
+``          <span className="toggle--label-background"></span> ``<br>
+``     </label>`` <br>
+``</div>`` <br>
+<br>
 
