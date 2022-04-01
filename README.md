@@ -27,8 +27,9 @@ HTML:<br>
 ``});`` <br>
 <br>
 The code I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
-```<br>
-<div className="container--toggle">
+<br>
+HTML: <br>
+```<div className="container--toggle">
     {
         togClass === "light" ? 
             <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />
@@ -38,6 +39,21 @@ The code I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to
      <label htmlFor="toggle" className="toggle--label">
           <span className="toggle--label-background"></span>
      </label>
-</div>```
+</div>``` <br>
+<br>
+JavaScript <br>
+<br>
+```const handleKeypress = e => {
+  if (e.key === "Enter") {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
+      setTogClass('light')
+    } else {
+      setTheme('theme-dark');
+      setTogClass('dark')
+    }
+  }
+}``` <br>
+<br>
 
 
