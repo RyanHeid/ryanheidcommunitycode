@@ -44,7 +44,7 @@ HTML: <br>
 </div>
 ```
 <br>
-JavaScript:
+JavaScript: <br>
 ```
 
 const handleKeypress = e => {
