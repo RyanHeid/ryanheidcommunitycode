@@ -44,7 +44,7 @@ HTML: <br>
 </div>
 ```
 <br>
-JavaScript: <br>
+JavaScript: 
 ```const handleKeypress = e => {
   if (e.key === "Enter") {
     if (localStorage.getItem('theme') === 'theme-dark') {
@@ -56,5 +56,5 @@ JavaScript: <br>
     }
   }```
 
-<br>
+
 
