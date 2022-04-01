@@ -111,6 +111,7 @@ HTML: <br>
 ```
 <br>
 JavaScript:
+
 ```javascript
  <script type="text/javascript">
         $(document).ready(function() {
@@ -138,6 +139,7 @@ if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
 ```
 <br>
 The code I referenced from was posted by CodingNepal on Jun. 04, 2021
+
 ```javascript
 const form = document.querySelector("form");
 eField = form.querySelector(".email"),
@@ -182,3 +184,4 @@ form.onsubmit = (e)=>{
     window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
   }
 }
+```
