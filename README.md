@@ -124,7 +124,67 @@ JavaScript:
         });
     </script>
 ```    
+## Code that I couldn't get to work
+I also looked in my community for ways that I could add validation to my form. I was not successful in finding anything. I believe this is because of the built in email validation I am using in my HTML. It also could be the way that I built my form. In the future, I may rebuild my form and see if I can implement this code then. The code I referenced was using a password. Since I am not asking for a password in my form, I was going to remove this part of the code. <br>
+JavaScript: <br>
+``javascript
+function validateemail()  
+{  
+var x=document.form.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}  
+```
+<br>
+The code I referenced from was posted by CodingNepal on Jun. 04, 2021
 
-        
+```javascript
+const form = document.querySelector("form");
+eField = form.querySelector(".email"),
+eInput = eField.querySelector("input"),
+pField = form.querySelector(".password"),
+pInput = pField.querySelector("input");
+form.onsubmit = (e)=>{
+  e.preventDefault(); //preventing from form submitting
+  //if email and password is blank then add shake class in it else call specified function
+  (eInput.value == "") ? eField.classList.add("shake", "error") : checkEmail();
+  (pInput.value == "") ? pField.classList.add("shake", "error") : checkPass();
+  setTimeout(()=>{ //remove shake class after 500ms
+    eField.classList.remove("shake");
+    pField.classList.remove("shake");
+  }, 500);
+  eInput.onkeyup = ()=>{checkEmail();} //calling checkEmail function on email input keyup
+  pInput.onkeyup = ()=>{checkPass();} //calling checkPassword function on pass input keyup
+  function checkEmail(){ //checkEmail function
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; //pattern for validate email
+    if(!eInput.value.match(pattern)){ //if pattern not matched then add error and remove valid class
+      eField.classList.add("error");
+      eField.classList.remove("valid");
+      let errorTxt = eField.querySelector(".error-txt");
+      //if email value is not empty then show please enter valid email else show Email can't be blank
+      (eInput.value != "") ? errorTxt.innerText = "Enter a valid email address" : errorTxt.innerText = "Email can't be blank";
+    }else{ //if pattern matched then remove error and add valid class
+      eField.classList.remove("error");
+      eField.classList.add("valid");
+    }
+  }
+  function checkPass(){ //checkPass function
+    if(pInput.value == ""){ //if pass is empty then add error and remove valid class
+      pField.classList.add("error");
+      pField.classList.remove("valid");
+    }else{ //if pass is empty then remove error and add valid class
+      pField.classList.remove("error");
+      pField.classList.add("valid");
+    }
+  }
+  //if eField and pField doesn't contains error class that mean user filled details properly
+  if(!eField.classList.contains("error") && !pField.classList.contains("error")){
+    window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
+  }
+}
 
 
