@@ -124,6 +124,7 @@ JavaScript:
 ## Code that I couldn't get to work
 I also looked in my community for ways that I could add validation to my form. I was not successful in finding anything. I believe this is because of the built in email validation I am using in my HTML. It also could be the way that I built my form. In the future, I may rebuild my form and see if I can implement this code then. The code I referenced was using a password. Since I am not asking for a password in my form, I was going to remove this part of the code. <br>
 JavaScript: <br>
+
 ```javascript
 function validateemail()  
 {  
