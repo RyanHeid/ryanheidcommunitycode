@@ -19,13 +19,12 @@ Here is the HTML for the toggle switch: <br>
 ```
 <br>
 Here is the JavaScript for the toggle switch: <br>
-HTML:<br> 
-<br>
-``const checkbox =`` <br>
-``document.getElementById('checkbox');`` <br>
-``checkbox.addEventListener('change', () => {`` <br>
-``doucument.body.classList.toggle('dark');`` <br>
-``});`` <br>
+``` javascript
+ const checkbox =
+ document.getElementById('checkbox');
+ checkbox.addEventListener('change', () => {
+document.body.classList.toggle('dark');
+ });```
 <br>
 The code I referenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
 <br>
