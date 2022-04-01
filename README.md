@@ -1,11 +1,14 @@
 # Community Code Project
+
 ## About My Community
-I picked the DEV community to engage with their JavaScript community. I've been happy with my choice, as it has proven to be a place where I have been able to find useful information about topics I am interested in JavaScript, as well as other programming languages like Kotlin or Python. I have built a website for my podcast, called Inside the Minds Podcast. One of my intentions of joining the DEV community was to search their resorces to find ways that I could imporve my website's HTML, CSS and JavaScript coding. Through trial and error, I was able to find some JavaScript code that I could implement on my website. I also found some code that I was not able to implement on my site. Not because it was bad code, or faulty code, but more so because of how I coded my website.
+
+I picked the DEV community to engage with their JavaScript community. I've been happy with my choice, as it has proven to be a place where I have been able to find useful information about topics I am interested in JavaScript, as well as other programming languages like Kotlin or Python. I have built a website for my podcast, called Inside the Minds Podcast. One of my intentions of joining the DEV community was to search their resorces to find ways that I could imporve my website's HTML, CSS and JavaScript coding. Through trial and error, I was able to find some JavaScript code that I could implement on my website. I also found some code that I was not able to implement on my site. Not because it was bad code, or faulty code, but more so because of how I coded my website. 
+
 ## Light/dark mode toggle switch
 After searching through some ideas, I found some code that allowed me to switch between a light and dark mode in the body of my website. This change works on a toggle switch that is below my navigation, near the top left of the screen. The "light" color is orange, and the "dark" color is a shade of black. I chose these colors because these are the colors of my website. I like how this turned out, although I am not sure that I will keep it. <br>
 Here is the HTML for the toggle switch: <br>
 ```html
-{<div>
+{<div> 
     <input type="checkbox"
     class="checkbox" id="checkbox">
     <label for="checkbox"
@@ -16,6 +19,7 @@ Here is the HTML for the toggle switch: <br>
 ```
 <br>
 Here is the JavaScript for the toggle switch: <br>
+
 ```javascript
  const checkbox =
  document.getElementById('checkbox');
@@ -23,7 +27,9 @@ Here is the JavaScript for the toggle switch: <br>
 document.body.classList.toggle('dark');
  });
  ```
+ 
 <br>
+
 The code I referenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
 <br>
 HTML: <br>
@@ -69,6 +75,7 @@ HTML: <br>
         <input type="submit" value="Submit">
         <br>
  ```
+ 
  JavaScript: <br>
  ```javascript
  function myFunction() {
@@ -113,20 +120,20 @@ JavaScript:
             });
         });
     </script>
- ```
+ ```    
 ## Code that I couldn't get to work
 I also looked in my community for ways that I could add validation to my form. I was not successful in finding anything. I believe this is because of the built in email validation I am using in my HTML. It also could be the way that I built my form. In the future, I may rebuild my form and see if I can implement this code then. The code I referenced was using a password. Since I am not asking for a password in my form, I was going to remove this part of the code. <br>
 JavaScript: <br>
 ```javascript
-function validateemail()
-{
-var x=document.form.email.value;
-var atposition=x.indexOf("@");
-var dotposition=x.lastIndexOf(".");
-if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
-  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);
-  return false;
-  }
+function validateemail()  
+{  
+var x=document.form.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }    
 ```
 <br>
 The code I referenced from was posted by CodingNepal on Jun. 04, 2021
@@ -173,6 +180,4 @@ form.onsubmit = (e)=>{
   if(!eField.classList.contains("error") && !pField.classList.contains("error")){
     window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
   }
-  }
-
-
+}
