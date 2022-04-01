@@ -7,15 +7,16 @@ I picked the DEV community to engage with their JavaScript community. I've been 
 ## Light/dark mode toggle switch
 After searching through some ideas, I found some code that allowed me to switch between a light and dark mode in the body of my website. This change works on a toggle switch that is below my navigation, near the top left of the screen. The "light" color is orange, and the "dark" color is a shade of black. I chose these colors because these are the colors of my website. I like how this turned out, although I am not sure that I will keep it. <br>
 Here is the HTML for the toggle switch: <br>
-<br>
-``<div>`` <br>
-``<input type="checkbox">`` <br>
-``class="checkbox" id="checkbox">`` <br>
-``<label for="checkbox"`` <br>
-``class="label">`` <br>
-``<span class="ball"></span>`` <br>
-``</label>`` <br>
-``</div>`` <br>
+``` html
+<div> 
+    <input type="checkbox"
+    class="checkbox" id="checkbox">
+    <label for="checkbox"
+    class="label">
+    <span class="ball"></span>
+    </label>
+</div>
+```
 <br>
 Here is the JavaScript for the toggle switch: <br>
 HTML:<br> 
