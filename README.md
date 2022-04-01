@@ -51,6 +51,5 @@ JavaScript <br>
       setTheme('theme-dark');
       setTogClass('dark')
     }
-  }
-}``` 
+  }``` 
 
