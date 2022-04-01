@@ -27,7 +27,7 @@ HTML:<br>
 ``doucument.body.classList.toggle('dark');`` <br>
 ``});`` <br>
 <br>
-The code I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
+The code I referenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
 <br>
 HTML: <br>
 ```html
@@ -56,6 +56,75 @@ const handleKeypress = e => {
     }
   }```
 
+## Radio Button Confirmation
+I searched my community looking for a way to interact with a radio button in my form. I found a code snippet that displays if a radio button is checked, or unchecked.  Although I did not find exactly what I was looking for at the time, I made some modification to the code and changed it into code that would show the user what radio button they clicked after pressing a button. Here is my code. <br>
+HTML: <br>
+```html
+   <form id="form-user" method="post" onsubmit="return checkForm(this);" action="https://learndigital.dev/programs/dgl103-form.php">
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="firstname" placeholder="Ex: Mike">
+            <br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lastname" placeholder="Ex: Smith">
+            <br>
+        <label for="email">Email </label><br>
+        <input type="text" id="email" name="email" placeholder="Ex: ryan@gmail.com" required>
+        <input type="submit" value="Submit">
+        <br>
+ ```
+ 
+ JavaScript: <br>
+ ```javascript
+ function myFunction() {
+  let date = document.forms[0];
+  let txt = "";
+  let i;
 
+  for (i=0; i < date.length; i++){
+if (date[i].checked) {
+ txt = txt + date[i].value + "";
+}
+document.getElementById("results").value = "Selected date is: " + txt;
+  }
+```
+The code I referenced from was posted by Codeanddeploy on Mar. 23 https://dev.to/codeanddeploy/how-to-unchecked-a-radio-button-using-javascriptjquery-1h1f <br>
+HTML: <br>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>How to unchecked a radio button using JavaScript/jQuery?</title>
+</head>
+<body>
+    <h1>How to unchecked a radio button using JavaScript/jQuery?</h1>
+
+    <form id="form1">
+
+
+        <p><b>Current Status</b></p>
+        <input type="radio" value="1" name="status" class="status" checked> Active
+
+        <br/><br/>
+
+        <button type="button" id="btnSubmit">Deactivate</button>
+    </form>
+</body>
+</html>
+```
+<br>
+JavaScript:
+```javascript
+ <script type="text/javascript">
+        $(document).ready(function() {
+            $("#btnSubmit").on("click", function() {
+                var status = $(".status");
+                status.prop("checked", false);
+            });
+        });
+    </script>
+```    
+
+        
 
 
