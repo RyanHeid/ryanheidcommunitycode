@@ -27,52 +27,17 @@ HTML:<br>
 ``});`` <br>
 <br>
 The code I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
-<br>
-``<div className="container--toggle">`` <br>
-``    {`` <br>
-``        togClass === "light" ?``<br> 
-``            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />`` <br>
-``        :`` <br>
-``            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} />`` <br>
-``     }`` <br>
-``     <label htmlFor="toggle" className="toggle--label">`` <br>
-``          <span className="toggle--label-background"></span> ``<br>
-``     </label>`` <br>
-``</div>`` <br>
-<br>
-JavaScript <br>
-<br>
-``const handleKeypress = e => {`` <br>
- `` if (e.key === "Enter") {`` <br>
- ``   if (localStorage.getItem('theme') === 'theme-dark') {`` <br>
- ``     setTheme('theme-light');`` <br>
- ``     setTogClass('light')`` <br>
- ``   } else {`` <br>
-``      setTheme('theme-dark');`` <br>
-``      setTogClass('dark')`` <br>
-``    }`` <br>
-``  }`` <br>
-``}`` <br>
+```<br>
+<div className="container--toggle">
+    {
+        togClass === "light" ? 
+            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />
+        :
+            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} />
+     }
+     <label htmlFor="toggle" className="toggle--label">
+          <span className="toggle--label-background"></span>
+     </label>
+</div>```
 
-
-    if (localStorage.getItem('theme') === 'theme-dark') {
-      setTheme('theme-light');
-      setTogClass('light')
-    } else {
-      setTheme('theme-dark');
-      setTogClass('dark')
-    }
-  }
-}
-
-  if (e.key === "Enter") {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-      setTheme('theme-light');
-      setTogClass('light')
-    } else {
-      setTheme('theme-dark');
-      setTogClass('dark')
-    }
-  }
-}
 
