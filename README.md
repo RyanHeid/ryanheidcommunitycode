@@ -18,6 +18,7 @@ Here is the HTML for the toggle switch: <br>
 ``</div>`` <br>
 <br>
 Here is the JavaScript for the toggle switch: <br>
+HTML:<br> 
 <br>
 ``const checkbox =`` <br>
 ``document.getElementById('checkbox');`` <br>
@@ -39,4 +40,39 @@ The code I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to
 ``     </label>`` <br>
 ``</div>`` <br>
 <br>
+JavaScript <br>
+<br>
+``const handleKeypress = e => {`` <br>
+ `` if (e.key === "Enter") {`` <br>
+ ``   if (localStorage.getItem('theme') === 'theme-dark') {`` <br>
+ ``     setTheme('theme-light');`` <br>
+ ``     setTogClass('light')`` <br>
+ ``   } else {`` <br>
+``      setTheme('theme-dark');`` <br>
+``      setTogClass('dark')`` <br>
+``    }`` <br>
+``  }`` <br>
+``}`` <br>
+
+
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
+      setTogClass('light')
+    } else {
+      setTheme('theme-dark');
+      setTogClass('dark')
+    }
+  }
+}
+
+  if (e.key === "Enter") {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
+      setTogClass('light')
+    } else {
+      setTheme('theme-dark');
+      setTogClass('dark')
+    }
+  }
+}
 
