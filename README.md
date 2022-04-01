@@ -27,10 +27,10 @@ Here is the JavaScript for the toggle switch: <br>
 <br>
 The code I refrenced from was posted by Abbey Perini Nov 06, 2021 https://dev.to/abbeyperini/an-accessible-dark-mode-toggle-in-react-aop <br>
 <br>
-<div className="container--toggle">
-    {
-        togClass === "light" ? 
-            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />
+``<div className="container--toggle">`` <br>
+``    {`` <br>
+``        togClass === "light" ?``<br> 
+``            <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />`` <br>
         :
             <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} />
      }
